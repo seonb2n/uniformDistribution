@@ -1,3 +1,6 @@
+import java.util.List;
+import java.util.Random;
+
 public class Main {
 
     /**
@@ -12,9 +15,34 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
+        System.out.println("------ Program Start -----");
+        System.out.println("------ Create IP Repository -----");
+        // todo IP Repository 구현
 
+        System.out.println("------ Save 1000 IP Address -----");
+        // todo IP 주소를 Repository 에 저장
 
+        System.out.println("------ Show Uniformed Ratio -----");
+        // todo Bucket 별로 균등하게 분배가 됐는지 체크
+    }
 
-        System.out.println("Hello world!");
+    /**
+     * Random IP 주소를 반환한다.
+     * @return
+     */
+    public static String generateRandomIPAddress() {
+        Random rand = new Random();
+        StringBuilder ipBuilder = new StringBuilder();
+
+        for (int i = 0; i < 4; i++) {
+            int segment = rand.nextInt(256); // 0부터 255까지의 랜덤 숫자 생성
+            ipBuilder.append(segment);
+
+            if (i < 3) {
+                ipBuilder.append(".");
+            }
+        }
+
+        return ipBuilder.toString();
     }
 }
