@@ -1,3 +1,5 @@
+package UniformedHash;
+
 public class HashEncoder {
 
     private static final int HASH_KEY = 31;

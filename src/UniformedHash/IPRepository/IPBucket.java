@@ -1,3 +1,6 @@
+package UniformedHash.IPRepository;
+
+import UniformedHash.HashEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
