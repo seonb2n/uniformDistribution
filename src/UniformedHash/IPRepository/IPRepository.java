@@ -9,8 +9,6 @@ import java.util.List;
  */
 public interface IPRepository {
 
-    List<IPBucket> ipBucketList = new ArrayList<IPBucket>();
-
     /**
      * ip 를 bucket 에 저장하고 bucket 의 인덱스 번호를 반환한다.
      * @param ip
@@ -23,6 +21,6 @@ public interface IPRepository {
      * @param bucketIndex
      * @return
      */
-    List<String> getIP(String bucketIndex);
+    List<String> getIP(int bucketIndex);
 
 }

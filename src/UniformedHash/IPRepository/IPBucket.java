@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * IP Bucket Class
  */
-public class IPBucket {
+public class IPBucket implements Comparable<IPBucket> {
 
     private String originBucketIP;
 
@@ -45,5 +45,14 @@ public class IPBucket {
      */
     public String getOriginBucketIP() {
         return originBucketIP;
+    }
+
+    public List<String> getIPList() {
+        return IPList;
+    }
+
+    @Override
+    public int compareTo(IPBucket o) {
+        return Long.compare(this.hashedBucketIP, o.hashedBucketIP);
     }
 }
